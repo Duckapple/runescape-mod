@@ -1,5 +1,6 @@
 package dev.simongreen.runescape;
 
+import dev.simongreen.runescape.item.Talisman;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -22,6 +23,7 @@ public class RuneScapeMod implements ModInitializer {
 	public static final Item FIRE_RUNE = registerBasic("fire_rune");
 	public static final Item EARTH_RUNE = registerBasic("earth_rune");
 	public static final Item WATER_RUNE = registerBasic("water_rune");
+	public static final Item AIR_TALISMAN = registerBasic("air_talisman", new Talisman(new FabricItemSettings()));
 
 	private static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.create(new Identifier(NAMESPACE, "all_items"))
 			.icon(() -> new ItemStack(AIR_RUNE))
@@ -30,11 +32,15 @@ public class RuneScapeMod implements ModInitializer {
 				itemStacks.add(new ItemStack(FIRE_RUNE));
 				itemStacks.add(new ItemStack(EARTH_RUNE));
 				itemStacks.add(new ItemStack(WATER_RUNE));
+				itemStacks.add(new ItemStack(AIR_TALISMAN));
 			})
 			.build();
 
 	public static final Item registerBasic(String path) {
-		return Registry.register(Registry.ITEM, new Identifier(NAMESPACE, path), new Item(new FabricItemSettings()));
+		return registerBasic(path, new Item(new FabricItemSettings()));
+	}
+	public static final Item registerBasic(String path, Item item) {
+		return Registry.register(Registry.ITEM, new Identifier(NAMESPACE, path), item);
 	}
 	@Override
 	public void onInitialize() {
