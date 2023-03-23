@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "runescape",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "RuneScape",
+  "description": "Craft runes and cast spells across the scape!",
   "authors": [
-    "Me!"
+    "Duckapple"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://runescape.simon-green.dev/",
+    "sources": "https://github.com/Duckapple/runescape-mod"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/runescape/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "dev.simongreen.runescape.RuneScapeMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "runescape.mixins.json"
   ],
 
   "depends": {
