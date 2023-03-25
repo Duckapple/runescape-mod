@@ -28,10 +28,12 @@ public class RuneAltarItem extends BlockItem {
         if (player == null) return state;
         var yaw = player.getYaw() % 360;
         if (yaw < 0) yaw += 360;
+
         var dir = Direction.NORTH;
         if (yaw < 90) dir = Direction.EAST;
         else if (yaw < 180) dir = Direction.SOUTH;
         else if (yaw < 270) dir = Direction.WEST;
+
         var world = ctx.getWorld();
         var pos = ctx.getBlockPos();
         var other = RuneAltar.getOtherPositions(dir, pos);

@@ -9,6 +9,17 @@ public enum RuneType implements StringIdentifiable {
     FIRE("fire"),
     WATER("water"),
     EARTH("earth"),
+    MIND("mind"),
+    BODY("body"),
+    COSMIC("cosmic"),
+    CHAOS("chaos"),
+    NATURE("nature"),
+    LAW("law"),
+    DEATH("death"),
+    ASTRAL("astral"),
+    BLOOD("blood"),
+    SOUL("soul"),
+    WRATH("wrath")
     ;
     private final String ident;
     RuneType(String ident) {

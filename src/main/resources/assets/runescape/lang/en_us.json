@@ -4,6 +4,18 @@
   "item.runescape.fire_rune": "Fire Rune",
   "item.runescape.earth_rune": "Earth Rune",
   "item.runescape.water_rune": "Water Rune",
+  "item.runescape.mind_rune": "Mind Rune",
+  "item.runescape.body_rune": "body Rune",
+  "item.runescape.cosmic_rune": "Cosmic Rune",
+  "item.runescape.chaos_rune": "Chaos Rune",
+  "item.runescape.nature_rune": "Nature Rune",
+  "item.runescape.law_rune": "Law Rune",
+  "item.runescape.death_rune": "Death Rune",
+  "item.runescape.astral_rune": "Astral Rune",
+  "item.runescape.blood_rune": "Blood Rune",
+  "item.runescape.soul_rune": "Soul Rune",
+  "item.runescape.wrath_rune": "Wrath Rune",
   "item.runescape.air_talisman": "Air Talisman",
-  "item.runescape.rune_altar": "Rune Altar"
+  "block.runescape.rune_altar": "Rune Altar",
+  "item.runescape.rune_essence": "Rune Essence"
 }

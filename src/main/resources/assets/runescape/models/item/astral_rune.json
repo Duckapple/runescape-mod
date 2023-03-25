@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer1": "runescape:item/astral_rune",
+    "layer0": "runescape:item/base_rune"
+  }
+}

@@ -2,10 +2,7 @@ package dev.simongreen.runescape.block;
 
 import dev.simongreen.runescape.common.RuneType;
 import dev.simongreen.runescape.item.RuneAltarItem;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalFacingBlock;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.BlockHalf;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
@@ -50,8 +47,6 @@ public class RuneAltar extends HorizontalFacingBlock {
             }
         }
     }
-
-
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
