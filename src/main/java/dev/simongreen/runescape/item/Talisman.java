@@ -17,7 +17,6 @@ public class Talisman extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        var res = super.use(world, user, hand);
         if (world.isClient())
             user.sendMessage(new LiteralText("It's getting hot"), false);
         return TypedActionResult.success(user.getStackInHand(hand),  world.isClient());

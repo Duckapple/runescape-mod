@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "dev.simongreen.runescape.RuneScapeMod"
+    ],
+    "client": [
+      "dev.simongreen.runescape.RuneScapeModClient"
     ]
   },
   "mixins": [
