@@ -19,9 +19,11 @@ public enum RuneType implements StringIdentifiable {
     ASTRAL("astral"),
     BLOOD("blood"),
     SOUL("soul"),
-    WRATH("wrath")
+    WRATH("wrath"),
     ;
+
     private final String ident;
+
     RuneType(String ident) {
         this.ident = ident;
     }

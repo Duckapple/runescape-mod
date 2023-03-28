@@ -1,9 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "runescape:block/rune_altar", "y": 180 },
-        "facing=east": { "model": "runescape:block/rune_altar", "y": 270 },
-        "facing=west": { "model": "runescape:block/rune_altar", "y": 90 },
-        "facing=south": { "model": "runescape:block/rune_altar" }
-    }
-}
-

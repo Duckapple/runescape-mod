@@ -1,0 +1,3 @@
+{ "parent": "runescape:block/rune_altar",
+  "textures": { "rune": "runescape:item/air_rune" }
+}
