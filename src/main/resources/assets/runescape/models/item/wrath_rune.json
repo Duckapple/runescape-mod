@@ -1,7 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer1": "runescape:item/wrath_rune",
-    "layer0": "runescape:item/base_rune"
-  }
-}
