@@ -23,6 +23,8 @@ classes/
 bin/
 .classpath
 .project
+# And the metals extension, grr
+.metals
 
 # macos
 
@@ -31,3 +33,7 @@ bin/
 # fabric
 
 run/
+
+# By default, ignore json files ()
+*.json
+!*.base.json
