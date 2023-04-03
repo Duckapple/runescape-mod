@@ -1,12 +1,16 @@
 package dev.simongreen.runescape.block;
 
+import dev.simongreen.runescape.RuneScapeMod;
 import dev.simongreen.runescape.common.RuneType;
 import net.minecraft.block.*;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.state.StateManager;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+import net.minecraft.world.WorldAccess;
 
 public class RuneAltar extends HorizontalFacingBlock {
     private final RuneType runeType;
@@ -28,25 +32,26 @@ public class RuneAltar extends HorizontalFacingBlock {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        switch (state.get(FACING)) {
-            default -> {
-                return NW_SHAPE;
-            }
-            case SOUTH -> {
-                return SE_SHAPE;
-            }
-            case WEST -> {
-                return SW_SHAPE;
-            }
-            case EAST -> {
-                return NE_SHAPE;
-            }
-        }
+        return switch (state.get(FACING)) {
+            default -> NW_SHAPE;
+            case SOUTH -> SE_SHAPE;
+            case WEST -> SW_SHAPE;
+            case EAST -> NE_SHAPE;
+        };
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+    @Override
+    public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
+        var others = getOtherPositions(state.get(FACING), pos);
+        super.onBroken(world, pos, state);
+        for (var other : others.others) {
+            world.breakBlock(other, false);
+        }
     }
 
     // @Override
