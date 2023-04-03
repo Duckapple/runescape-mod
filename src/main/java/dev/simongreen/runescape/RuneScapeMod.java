@@ -29,7 +29,7 @@ public class RuneScapeMod implements ModInitializer {
     public static final Item[] RUNES = new Item[RuneType.values().length];
     public static final Item RUNE_ESSENCE = registerBasic("rune_essence",
             new Item(new FabricItemSettings().maxCount(1)));
-    public static final Item AIR_TALISMAN = registerBasic("air_talisman", new Talisman(new FabricItemSettings()));
+    public static final Item AIR_TALISMAN = registerBasic("air_talisman", new Talisman(new FabricItemSettings().maxCount(1), RuneType.AIR));
     // public static final Block RUNE_ALTAR = Registry.register(Registry.BLOCK, new
     // Identifier(NAMESPACE, "rune_altar"),
     // new RuneAltar(FabricBlockSettings.copy(Blocks.BEDROCK).nonOpaque()));
